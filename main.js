@@ -24,10 +24,9 @@ const addTodo = () => {
   const elements = Array.from(list.getElementsByTagName("div"));
   elements.forEach((element) => {
     const [pEl, spanEl] = element.childNodes;
-
     // Edit todo task
     pEl.addEventListener("click", () => {
-      let originalTask = pEl.textContent;
+      const originalTask = pEl.textContent;
       const modifiedTask = prompt("Modify Task", originalTask);
       pEl.textContent = modifiedTask !== "" ? modifiedTask : originalTask;
     });
